@@ -1,4 +1,4 @@
-export type JobsStackNav = {
-  JobsList: undefined;
+export type HomeStackNav = {
+  Home: undefined;
   JobDetails: {jobId: string};
 };
