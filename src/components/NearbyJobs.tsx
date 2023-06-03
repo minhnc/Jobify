@@ -1,6 +1,6 @@
 import { ActivityIndicator, View } from "react-native"
 import { Text, useTheme } from "react-native-paper"
-import NearbyJobCard from "./NearbyJobCard"
+import JobCard from "./JobCard"
 import type { Job } from "@app/types"
 import { useAppTheme } from "@app/../App"
 
@@ -17,14 +17,14 @@ const NearbyJobs = ({ data, isLoading, error }: NearbyJobsProps) => {
         <>
             <Text variant="headlineMedium">Jobs near you</Text>
 
-            <View style={{ marginTop: theme.spacing.md, gap: theme.spacing.sm }}>
+            <View style={{ gap: theme.spacing.sm }}>
                 {isLoading ?
                     (<ActivityIndicator size="large" color={theme.colors.primary} />)
                     : error ? (
                         <Text variant="titleMedium">Oops...</Text>
                     ) : (
                         data?.map((job) => (
-                            <NearbyJobCard
+                            <JobCard
                                 key={`nearby-jobs-${job.job_id}`}
                                 job={job}
                             />

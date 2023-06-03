@@ -2,7 +2,7 @@ import { Card } from "react-native-paper"
 import { Job } from "@app/types"
 import JobIcon from "./JobIcon"
 
-const NearbyJobCard = ({ job }: { job: Job }) => (
+const JobCard = ({ job }: { job: Job }) => (
     <Card mode="contained">
         <Card.Title
             title={job.job_title} titleVariant="titleMedium"
@@ -13,4 +13,4 @@ const NearbyJobCard = ({ job }: { job: Job }) => (
     </Card>
 )
 
-export default NearbyJobCard
+export default JobCard
