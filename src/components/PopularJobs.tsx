@@ -1,6 +1,6 @@
 import { ActivityIndicator, FlatList, View } from "react-native"
 import { Text } from "react-native-paper"
-import JobCard from "./JobCard"
+import JobCard, { Mode } from "./JobCard"
 import type { Job } from "@app/types"
 import { useAppTheme } from "@app/../App"
 
@@ -26,7 +26,7 @@ const PopularJobs = ({ data, isLoading, error }: PopularJobsProps) => {
                         <FlatList
                             data={data}
                             keyExtractor={(item) => `popular-jobs-${item.job_id}`}
-                            renderItem={({ item }) => <JobCard job={item} />}
+                            renderItem={({ item }) => <JobCard job={item} mode={Mode.full} />}
                             contentContainerStyle={{ columnGap: theme.spacing.md }}
                             horizontal
                             showsHorizontalScrollIndicator={false}
