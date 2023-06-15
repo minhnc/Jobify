@@ -5,7 +5,8 @@ import {API_KEY} from '@env';
 import type {Job} from '@app/types';
 
 type Query = {
-  query: string;
+  query?: string;
+  job_id?: string;
   page?: string;
 };
 

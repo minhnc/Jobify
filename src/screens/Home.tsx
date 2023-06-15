@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { ScrollView, View } from "react-native"
 import { SafeAreaView } from "react-native-safe-area-context"
+import { Text } from "react-native-paper"
 import { useAppTheme } from "@app/../App"
 import NearbyJobs from "@app/components/NearbyJobs"
 import PopularJobs from "@app/components/PopularJobs"
@@ -19,6 +20,7 @@ const Home = () => {
         <SafeAreaView style={{ flex: 1, backgroundColor: colors.background }}>
             <ScrollView showsVerticalScrollIndicator={false} >
                 <View style={{ flex: 1, padding: spacing.md, gap: spacing.lg }}>
+                    <Text variant="displaySmall">Your dream job</Text>
                     <PopularJobs
                         data={data?.data}
                         isLoading={isLoading}

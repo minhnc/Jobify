@@ -15,7 +15,7 @@ const NearbyJobs = ({ data, isLoading, error }: NearbyJobsProps) => {
 
     return (
         <>
-            <Text variant="headlineMedium">Jobs near you</Text>
+            <Text variant="headlineSmall">Jobs near you</Text>
 
             <View style={{ gap: theme.spacing.sm }}>
                 {isLoading ?

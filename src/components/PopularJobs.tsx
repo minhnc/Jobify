@@ -15,7 +15,7 @@ const PopularJobs = ({ data, isLoading, error }: PopularJobsProps) => {
 
     return (
         <>
-            <Text variant="headlineMedium">Popular jobs</Text>
+            <Text variant="headlineSmall">Popular jobs</Text>
 
             <>
                 {isLoading ?

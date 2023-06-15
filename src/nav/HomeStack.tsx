@@ -25,7 +25,11 @@ export const HomeStack = () => {
             <Stack.Screen
                 name="JobDetails"
                 component={JobDetails}
-                options={{ headerTitle: "TODO-name here" }}
+                options={{
+                    headerStyle: { backgroundColor: colors.background },
+                    headerShadowVisible: false,
+                    headerTitle: ''
+                }}
             />
         </Stack.Navigator>
     )
